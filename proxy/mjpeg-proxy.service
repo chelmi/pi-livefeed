@@ -1,0 +1,10 @@
+[Unit]
+Description=MJPEG proxy server
+
+[Service]
+ExecStart=/home/mjpeg-proxy/mjpeg-proxy-master/mjpeg-proxy -url=/cam -source "http://x.x.x.x:8998"
+User=mjpeg-proxy
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
